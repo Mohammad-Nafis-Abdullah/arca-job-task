@@ -5,11 +5,7 @@ export const Hierarchy = ({ data }: { data: objData[] }) => {
 
     const parent = (d: objData[]) => {
         const parent = d.filter((p: objData) => {
-        if (!p.parentId && p.type === "Category") {
-            return true;
-        } else {
-            return false;
-        }
+        return !p.parentId && p.type === "Category"
         });
 
         const parentTag = parent.map((p: objData, i) => {
@@ -66,12 +62,7 @@ export const Hierarchy = ({ data }: { data: objData[] }) => {
 
     const child = (p: objData, d: objData[]) => {
         const getChild = d.filter((c: objData) => {
-        if (p.id === c.parentId) {
-            return true;
-        } else {
-            return false;
-        }
-        });
+        return p.id === c.parentId});
 
         const child_tag = getChild.map((c: objData, i) => {
         totalData = totalData.filter((r: objData) => {

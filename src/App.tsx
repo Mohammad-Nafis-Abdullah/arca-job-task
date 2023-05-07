@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("/api/test5m23", {
+      .get(import.meta.env.VITE_api, {
         headers: {
           Authorization: "Bearer 1|FWItRXH5DCAN9rjBjIhfH9KMnprvKZweoK2Jfi5T",
         },
