@@ -1,5 +1,5 @@
 .box{
-    max-width: 400px;
+    max-width: 220px;
     background-color: lightgreen;
     margin: 10px 20px;
     padding: 10px;
@@ -10,7 +10,15 @@
 }
 
 li{
-    /* list-style: none; */
+    list-style: none;
+}
+
+.parent{
+    border-left: solid;
+}
+
+.firstChild{
+    border-left: solid orange;
 }
 
 .extra-gap{
